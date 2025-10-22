@@ -9,9 +9,12 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
 
         Figures[] figures = {new Square(colorSupplier.getRandomColor(), random.nextInt(20)),
-                                new Rectangle(colorSupplier.getRandomColor(), random.nextInt(20), random.nextInt(20)),
-                                new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(20), random.nextInt(20)),
-                                new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(20), random.nextInt(20), random.nextInt(20) )};
+                new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(20), random.nextInt(20)),
+                new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(20), random.nextInt(20)),
+                new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(20), random.nextInt(20), random.nextInt(20))};
 
         return figures[random.nextInt(figures.length - 1)];
     }

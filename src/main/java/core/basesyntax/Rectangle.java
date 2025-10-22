@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures implements Area{
+public class Rectangle extends Figures {
     private int sideA;
     private int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
-        super.color = color;
-        super.name = "Rectangle";
+        super(color, "Rectangle");
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -26,6 +25,7 @@ public class Rectangle extends Figures implements Area{
 
     @Override
     public void printFigure() {
-        System.out.println("Figure: " + name + ", area: " + findArea() + " sq. units, side: " + sideA + ", sideB:" + sideB + ", color: " + color);
+        System.out.println("Figure: " + getName() + ", area: " + findArea() + " sq. units, side: "
+                + sideA + ", sideB:" + sideB + ", color: " + getColor());
     }
 }
