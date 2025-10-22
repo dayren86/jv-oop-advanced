@@ -11,7 +11,7 @@ public class Rectangle extends Figures {
     }
 
     @Override
-    public int findArea() {
+    public double getArea() {
         return sideA * sideB;
     }
 
@@ -24,8 +24,8 @@ public class Rectangle extends Figures {
     }
 
     @Override
-    public void printFigure() {
-        System.out.println("Figure: " + getName() + ", area: " + findArea() + " sq. units, side: "
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq. units, side: "
                 + sideA + ", sideB:" + sideB + ", color: " + getColor());
     }
 }

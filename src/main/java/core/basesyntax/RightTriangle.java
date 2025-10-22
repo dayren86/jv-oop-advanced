@@ -1,31 +1,31 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figures {
-    private int sideA;
-    private int sideB;
+    private int firstLeg;
+    private int secondLeg;
 
-    public RightTriangle(String color, int sideA, int sideB) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color, "RightTriangle");
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public int findArea() {
-        return (int) ((sideA * sideB) * 0.5);
+    public double getArea() {
+        return (firstLeg * secondLeg) * 0.5;
     }
 
     public int getSideA() {
-        return sideA;
+        return firstLeg;
     }
 
     public int getSideB() {
-        return sideB;
+        return secondLeg;
     }
 
     @Override
-    public void printFigure() {
-        System.out.println("Figure: " + getName() + ", area: " + findArea() + " sq. units, sideA: "
-                + sideA + ", sideB:" + sideB + ", color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq. units, sideA: "
+                + firstLeg + ", sideB:" + secondLeg + ", color: " + getColor());
     }
 }
